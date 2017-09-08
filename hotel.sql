@@ -14,8 +14,8 @@ CREATE TABLE guest (
 );
 
 CREATE TABLE booking (
-  room_id int,
-  guest_id int,
+  room_id int REFERENCES room(room_id),
+  guest_id int REFERENCES guest(guest_id),
   check_in_date date,
   check_out_date date
 );
